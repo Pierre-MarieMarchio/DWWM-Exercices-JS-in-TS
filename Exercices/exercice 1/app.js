@@ -1,26 +1,39 @@
 "use strict";
 const age = document.getElementById("age");
-const sex = document.getElementById("sex");
+const sexe = document.getElementById("sexe");
 const btnSubmit = document.getElementById("btnSubmit");
 let formResults = {
-    age: "",
-    sex: "",
+    age: 0,
+    sexe: "",
 };
 const handleform = () => {
-    btnSubmit.addEventListener("click", (e) => {
-        e.preventDefault();
-        let ageValue = "";
-        let sexValue = "";
-        if (age) {
-            ageValue = age.value;
-        }
-        if (sex) {
-            sexValue = sex.value;
-        }
-        formResults = {
-            age: ageValue,
-            sex: sexValue
-        };
-        return formResults;
-    });
+    let ageValue = 0;
+    let sexeValue = "";
+    if (age) {
+        ageValue = parseInt(age.value);
+    }
+    if (sexe) {
+        sexeValue = sexe.value;
+    }
+    formResults = {
+        age: ageValue,
+        sexe: sexeValue,
+    };
+    return formResults;
 };
+const impotsVerificator = (age, sexe) => {
+    if (sexe == "homme" && age >= 20) {
+    }
+    else if (sexe == "femme" && age >= 18 && sexe == "femme" && age <= 35) {
+        alert("imposable");
+    }
+    else {
+        alert("non imposable");
+    }
+};
+btnSubmit.addEventListener("click", (e) => {
+    e.preventDefault();
+    let formvalue = handleform();
+    impotsVerificator(formvalue.age, formvalue.sexe);
+    console.log(formvalue);
+});
