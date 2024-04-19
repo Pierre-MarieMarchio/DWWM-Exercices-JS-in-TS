@@ -8,10 +8,10 @@ const calcPhotocopiesPrice = (nbPhotocopies: number): number => {
     price = nbPhotocopies * 0.1;
     return price;
   } else if (nbPhotocopies <= 30) {
-    price = nbPhotocopies * 0.09 + 1;
+    price = (nbPhotocopies -10) * 0.09 +1;
     return price;
   } else if (nbPhotocopies >= 31) {
-    price = nbPhotocopies * 0.08 + 2.8;
+    price = (nbPhotocopies -30) * 0.08 + 2.8;
     return price;
   }
   return price;
