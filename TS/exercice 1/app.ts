@@ -26,6 +26,7 @@ const handleform = () => {
 
 const impotsVerificator = (age: number, sexe: string) => {
   if (sexe == "homme" && age >= 20) {
+    alert("imposable");
   } else if (sexe == "femme" && age >= 18 && sexe == "femme" && age <= 35) {
     alert("imposable");
   } else {
