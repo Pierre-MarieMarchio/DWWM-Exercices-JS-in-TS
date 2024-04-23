@@ -21,7 +21,6 @@ const moneyGiveBackCalculator = (moneyGiven: number, price: number, change: numb
       case giveBack >= 5:
         moneyCounter.billet5++;
         giveBack -= 5;
-
         break;
       case giveBack >= 1:
         moneyCounter.pieces1++;
