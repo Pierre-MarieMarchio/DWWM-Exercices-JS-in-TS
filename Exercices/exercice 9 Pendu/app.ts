@@ -1,15 +1,15 @@
 import { wordArray } from "./array.js";
 
-const letterBtns = document.querySelectorAll<HTMLLabelElement>(".btn-letter");
+const letterBtns: NodeListOf<HTMLLabelElement> = document.querySelectorAll(".btn-letter");
 const motDiv = document.getElementById("mot") as HTMLElement;
 const penduDiv = document.getElementById("pendu") as HTMLElement;
 const MAX_ATTEMPTS = 6;
 
-let randomIndex = Math.floor(Math.random() * wordArray.length);
-let wordToGuess = wordArray[randomIndex];
-let wordSplit = wordToGuess?.toLowerCase().split("");
-let guessedLetters = new Array(wordSplit?.length).fill("_");
-let wrongAttempts = 0;
+let randomIndex: number = Math.floor(Math.random() * wordArray.length);
+let wordToGuess: string | undefined = wordArray[randomIndex];
+let wordSplit: string[] | undefined = wordToGuess?.toLowerCase().split("");
+let guessedLetters: string[] = new Array(wordSplit?.length).fill("_");
+let wrongAttempts: number = 0;
 
 const updateView = (): void => {
   motDiv.innerText = guessedLetters.join(" ");

@@ -1,0 +1,100 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+}
+
+
+.code-row {
+  display: flex;
+  justify-content: center;
+}
+
+.code-peg,
+.guess-peg,
+.color-peg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.code-peg {
+  background-color: lightgray;
+}
+
+.guess-peg {
+  background-color: black;
+}
+
+.guess-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+
+.container {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+.guess-row {
+  align-items: center;
+}
+
+.guess-number {
+  font-weight: bold;
+}
+
+.guess-peg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.feedback-peg {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.black-peg {
+  background-color: black;
+}
+
+.white-peg {
+  background-color: white;
+  border: solid 1px ;
+}
+
