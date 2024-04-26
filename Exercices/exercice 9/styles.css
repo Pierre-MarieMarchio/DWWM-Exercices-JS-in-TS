@@ -1,0 +1,66 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f3f3f3;
+}
+
+#pendu {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#lettres-utilisees {
+  margin-bottom: 20px;
+}
+
+.button-container {
+  margin-top: 20px;
+}
+
+.btn-letter {
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 0;
+  padding: 10px 12px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin: 0.2rem;
+}
+
+.btn-letter:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.btn-letter:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.btn-letter:hover {
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+.btn-letter:focus,
+.btn-letter:active {
+  box-shadow: none;
+}
+
+.btn-letter.active {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-letter.active:hover {
+  background-color: #c82333;
+  color: white;
+}
